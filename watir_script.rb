@@ -1,6 +1,7 @@
 require 'watir-webdriver'
+# Selenium::WebDriver::Firefox::Binary.path = "/Applications/Firefox.app/"
 browser = Watir::Browser.new :firefox # should open a new Firefox window
-browser.goto 'http://nitrowriters.com/form/form.html' # or type the local path to your downloaded copy
+browser.goto 'file:///Users/crystalcontreras/form/form.html' # or type the local path to your downloaded copy
 
 browser.text_field(:id => 'my_text_field').set 'Yes!'
 browser.textarea(:class => 'element textarea medium').set 'It was a long time ago, I do not remember'
